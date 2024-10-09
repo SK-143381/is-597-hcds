@@ -1,0 +1,56 @@
+# Assume that the only compatible tips with the canes specified in this document are the "Hook On" tips unless the "8mm threaded adapter" is used.
+
+# I have intentionally excluded some cane models and options from this document
+
+# Guidance for how tall a cane should be.
+rec_height = ["cane length tends to range from the height of a person's sternum up to the chin"] 
+# We can add this to the above list if TripBot struggles "approximately 4 inches shorter than your height"
+# If TripBot continues to struggle, we can make a dict that resembles the guidance offered at the following link:
+# https://www.lowvisionsupply.com/pages/white-cane-sizing-guide
+
+
+# Minimum height of cane in inches (this is only accounting for the "adult" line of mobility canes).
+min_height = 36
+
+# Maximum height of cane in inches 
+max_height = 72
+
+# The available cane variations broken down by material. While "No-Jab" is technically made out of "Graphite" it is significantly different, see `descriptions` dictionary.
+canes = ["Aluminum", "Graphite", "Graphite No-Jab", "Fiberglass"]
+
+# Available form factors by material
+ffs = {
+    "Aluminum": ["Folding", "Rigid (Non-Folding)"],
+    "Graphite": ["Folding", "Rigid (Non-Folding)", "Telescopic"]
+    "Graphite No-Jab": ["Folding"],
+    "Fiberglass": ["Folding", "Rigid (Non-Folding)", "Telescopic"]
+}
+
+# Available handle types by material AND form factor
+handles = {
+    "Aluminum": {
+        "Folding": ["Standard", "Cork", "Wood"],
+        "Rigid (Non-Folding): ["Standard", "Cork", "Wood"]
+    },
+    "Graphite": {
+        "Folding": ["Standard", "Cork", "Wood"],
+        "Rigid (Non-Folding)": ["Standard", "Cork", "Wood"],
+        "Telescopic": ["Standard"]
+    },
+    "Graphite No-Jab": {
+        "Folding": ["Standard", "Leather"]
+    },
+    "Fiberglass": {
+        "Folding": ["Standard"],
+        "Rigid (Non-Folding)": ["Standard"],
+        "Telescopic": ["Standard"]
+    }
+} 
+
+# Descriptions of the various cane materials 
+descs = {
+    "Aluminum": ["Heavy-gauge aluminum (0.5” / 13 mm)", "New conical joint design made from anodized aluminum provides superior tactile transmission, protects the elastic and ensures a snug fit", "Affordable"],
+    "Graphite": ["Unique composite construction", "New conical joint design made from anodized aluminum provides superior tactile transmission, protects the elastic and ensures a snug fit", "Strong and light weight", "Greater flexibility and strength than aluminum canes"],
+    "Graphite No-Jab": ["Unique composite construction", "Incorporates the famous No-Jab shock absorbing recoil system (Patent US 10,898,406 B2) and grip on Ambutech’s best premium graphite/carbon fiber shaft", ""New conical joint design made from anodized aluminum provides superior tactile transmission, protects the elastic and ensures a snug fit", "Strong and light weight", "Greater flexibility and strength than aluminum canes"],
+    "Fiberglass": ["Ideal for use with the Roller, Jumbo Roller and Rolling Ball tips", "Heavy duty when durability is a major consideration"]
+}
